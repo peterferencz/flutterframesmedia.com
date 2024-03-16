@@ -31,3 +31,5 @@ const generateLang = (lang) => {
 Object.keys(langs).forEach(lang => generateLang(lang))
 fs.cpSync(path.join(__dirname, "assets"), path.join(__dirname, "docs", "assets"), {recursive: true})
 fs.cpSync(path.join(__dirname, "style.css"), path.join(__dirname, "docs", "style.css"))
+fs.cpSync(path.join(__dirname, "docs", "en.html"), path.join(__dirname, "docs", "index.html"))
+fs.cpSync(path.join(__dirname, "docs", "en.html"), path.join(__dirname, "docs", "404.html"))
