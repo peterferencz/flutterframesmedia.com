@@ -1,0 +1,26 @@
+{
+    "meta_description":"Flutterframes is a media company specializing in event videography including stunning drone shots",
+
+    "nav_home":"Home",
+    "nav_projects":"Projects",
+    "nav_team":"Team",
+    "nav_contact":"Contact",
+
+    "landing":"Capturing Moments, Framing Stories: Elevate Your Vision with Flutterframes media",
+
+    "projects_title":"Projects we have worked on",
+    "projects_project_sportday_title":"Engineering excellence meets athletic prowess: HTL Eisenstadt's Sports Days",
+    "projects_project_sportday_description":"Dive into the exhilarating HTL Eisenstadt Sportdays through our cinematic lens. Our video features stunning drone shots and dynamic camera footage, capturing the breathtaking moments of this premier sporting event.",
+    "projects_project_boxing_title":"Fightnight: a boxing tournament",
+    "projects_project_boxing_description":"Immerse yourself in the adrenaline-fueled world of the Fight Night Box Tournament through our dynamic video. Featuring breathtaking drone shots and captivating camera angles, our footage brings the intensity of this premier boxing event to life. Experience the action on our website now!",
+    
+    "team_title":"Meet your team",
+    "team_andras_name":"Andras Farkas",
+    "team_andras_role":"Drone pilot, Video editor",
+    "team_andras_description":"As a certified drone pilot holding A1, A2, and A3 licenses, I specialize in the art of precision flying, backed by years of extensive experience that continuously enriches my knowledge base. Fusing my sociable disposition with technical expertise, I am committed to delivering cutting-edge solutions, ensuring each project not only meets but surpasses the highest expectations.",
+    "team_peter_name":"Péter Ferencz",
+    "team_peter_role":"Cinematographer, Video editor",
+    "team_peter_description":"I am an accomplished Cameraman with extensive experience in camera technology and a flair for creating breathtaking visuals. My expertise extends to video editing, where I transform footage into stunning masterpieces. Additionally, I am a professional programmer, bringing a meticulous approach and technical finesse to every project I undertake.",
+    
+    "contact_title":"Get in touch"
+}

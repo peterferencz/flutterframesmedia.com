@@ -1,0 +1,350 @@
+$media-phone: 700px;
+$media-tablet: 1200px;
+
+$background: #141414;
+$text: #ffffff;
+$accent: #e15e1e;
+$text-gray: #6f6f6f;
+
+$navbarHeight: 3rem;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Arial';
+    color: $text;
+}
+
+button{
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+hr{
+    color: $accent;
+    height: 5px;
+    background: $accent;
+}
+
+html, body{
+    scroll-behavior: smooth;
+    scroll-padding-top: calc($navbarHeight + 1rem);
+    background-color: $background;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: $navbarHeight;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    @media only screen and (max-width: $media-phone) {
+        gap: .2rem;
+    }
+    background-color: $background;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+    > a{
+        text-decoration: none;
+        // margin-left: 2rem;
+        // margin-right: 2rem;
+        white-space: nowrap;
+        text-decoration: none;
+
+        background:
+        linear-gradient(
+            to right,
+            $text,
+            $text
+        ),
+        linear-gradient(
+            to right,
+            $accent,
+            $accent
+        );
+
+        $size: 1px;
+        background-size: 100% $size, 0 $size;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size .2s;
+
+        &:hover{
+            background-size: 0 $size, 100% $size;
+        }
+    }
+
+    img{
+        width: 4rem;
+        height: 4rem;
+        padding: .1rem;
+        margin-left: 1rem;
+    }
+
+    .language-switcher{
+        margin-right: 1rem;
+        display: flex;
+        flex-direction: row;
+        gap: .5rem;
+
+        >*{
+            cursor: pointer;
+        }
+
+        .active{
+            color: $accent;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        @media only screen and (max-width: $media-phone) {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+
+    .spacer{
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+}
+
+
+section{
+    >hr{
+        position: absolute;
+        top: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 5rem;
+    }
+    >h1{
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+}
+
+#landing{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    
+    video{
+        background: $background;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .overlay{
+        background: rgba(0,0,0, .7);
+        padding: 1rem;
+        position: absolute;
+        right: 0;
+        bottom: 10rem;
+        display: flex;
+        flex-direction: row;
+
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+        }
+
+        img{
+            width: 5rem;
+            height: 5rem;
+            margin-right: 1rem;
+        }
+        
+        h1, p{
+            color: white;
+        }
+    }
+}
+
+#projects{
+    width: 100%;
+    position: relative;
+
+    > div{
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        @media only screen and (max-width: $media-phone) {
+            flex-direction: column;
+            align-items: center;
+        }
+        flex-wrap: wrap;
+        gap: 3rem;
+        padding: 1.5rem;
+        width: 100%;
+
+        > div{
+            box-shadow: 0 0 50px 15px $background;
+            transition: box-shadow .75s, border .75s;
+            border-radius: .5rem;
+            padding-bottom: 2rem;
+            flex-grow: 1;
+            flex-basis: 0;
+            border: 1px solid $text-gray;
+            max-width: 500px;
+ 
+            &:hover{
+                box-shadow: 0 0 50px 15px $accent;
+                border: 1px solid transparent;
+            }
+
+            p, h1, a{
+                margin-left: 2rem;
+                margin-right: 2rem;
+            }
+            h1{
+                margin-top: .5rem;
+                margin-bottom: .5rem;
+            }
+            img{
+                width: 100%;
+                height: 300px;
+                background-color: gray;
+                object-fit: cover;
+                border-top-left-radius: .5rem;
+                border-top-right-radius: .5rem;
+            }
+            p{
+                margin-bottom: .5rem;
+            }
+            a{
+                color: $accent;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+#team{
+    width: 100%;
+    position: relative;
+
+    .section{
+        width: 100%;
+        display: flex;
+
+        flex-direction: row;
+        &.r{ flex-direction: row-reverse; }
+        @media only screen and (max-width: $media-phone) {
+            flex-direction: column !important;
+            
+        }
+        
+        justify-content: center;
+        align-items: center;
+
+
+        $w: 3px * 75;
+        $h: 5px * 75;
+        img{
+            width: $w;
+            height: $h;
+            background-color: #aaaaaa;
+            margin: 2rem;
+            object-fit: cover;
+            filter: grayscale(1);
+        }
+
+        .border{
+            $border: 3px;
+            $width: 20px;
+            $inset: 10px;
+            
+            width: calc($w + $border * 2 + $inset * 2);
+            height: calc($h + $border * 2 + $inset * 2);
+            position: absolute;
+            z-index: 3;
+            left: calc(2rem - $inset - $border);
+            top: calc(2rem - $inset - $border);
+            background: $accent;
+            $_g: #0000 90deg,#000 0;
+            $_p: $width $width no-repeat;
+            $mask:
+                conic-gradient(from 90deg  at top    $border left  $border, $_g) 0    0    / $_p,
+                conic-gradient(from 180deg at top    $border right $border, $_g) 100% 0    / $_p,
+                conic-gradient(from 0deg   at bottom $border left  $border, $_g) 0    100% / $_p,
+                conic-gradient(from -90deg at bottom $border right $border, $_g) 100% 100% / $_p;
+            -webkit-mask: $mask;
+            mask: $mask;
+        }
+
+        > div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+
+            p,h1{
+                @media only screen and (max-width: $media-phone) {
+                    width: 100%;
+                    text-align: center;
+                    padding: 0px;
+                }
+            }
+
+            
+            
+            p{
+                padding: 1rem;
+                
+                &.nick{
+                    color: $text-gray;
+                    margin-bottom: 1rem;
+                    padding: 0px;
+                }
+            }
+        }
+        &.l > div{ align-items: start; text-align: left;}
+        &.r > div{ align-items: end; text-align: right;}
+    }
+}
+
+#contact{
+    position: relative;
+
+    >div{
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+
+        a{
+            font-size: 2rem;
+            line-height: 2rem;
+        }
+        a{
+            color: $accent;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    }
+}
+
+footer{
+    p{
+        text-align: right;
+        margin-right: 1rem;
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "meta_description":"Flutterframes egy események videózásában specializálódott cég, lélegzetelállító drónfelvételek felhasználásával",
+
+    "nav_home":"Kezdőlap",
+    "nav_projects":"Projektjeink",
+    "nav_team":"Csapatunk",
+    "nav_contact":"Kontakt",
+
+    "landing":"",
+
+    "projects_title":"Eddigi projektjeink",
+    "projects_project_sportday_title":"Eisenstadt-i sportnapok",
+    "projects_project_sportday_description":"",
+    "projects_project_boxing_title":"Fightnight: boxbajnokság",
+    "projects_project_boxing_description":"Merülj el a Fight Night boxbajnokság adrenalinnal teli világában dinamikus videónk segítségével. Lélegzetelállító drónfelvételekkel és magával ragadó kameraszögekkel ellátott felvételeink életre keltik ennek az elsőszámú bokszeseménynek az intenzitását.",
+    
+    "team_title":"Csapatunk",
+    "team_andras_name":"Farkas Andras",
+    "team_andras_role":"Drónpilóta, Videószerkesztő",
+    "team_andras_description":"A1, A2 és A3 engedélyekkel rendelkező, tanúsított drónpilótaként a precíz repülés művészetére specializálódtam, amelyet több éves, átfogó tapasztalat támogat, amellyel folyamatosan gazdagítom ismereteimet. A társaságkedvelő természetemet a technikai szakértelemmel ötvözve célom, hogy élvonalbeli megoldásokat nyújtsak, biztosítva, hogy minden egyes projekt nem csak megfeleljen, hanem túl is szárnyalja a legmagasabb elvárásokat.",
+    "team_peter_name":"Ferencz Péter",
+    "team_peter_role":"Operatőr, Videószerkesztő",
+    "team_peter_description":"",
+    
+    "contact_title":"Kapcsolat"
+}
