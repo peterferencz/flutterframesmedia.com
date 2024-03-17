@@ -30,6 +30,7 @@ hr{
     color: $accent;
     height: 5px;
     background: $accent;
+    outline: none;
 }
 
 html, body{
@@ -347,7 +348,8 @@ section{
 
 footer{
     p{
-        text-align: right;
+        text-align: center;
         margin-right: 1rem;
+        color: $text-gray;
     }
 }
