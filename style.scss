@@ -90,6 +90,10 @@ nav{
         height: 4rem;
         padding: .1rem;
         margin-left: 1rem;
+
+        @media only screen and (max-width: $media-phone) {
+            display: none;
+        }
     }
 
     .language-switcher{
@@ -194,6 +198,9 @@ section{
         flex-wrap: wrap;
         gap: 3rem;
         padding: 1.5rem;
+        @media only screen and (max-width: $media-phone) {
+            padding: 0;
+        }
         width: 100%;
 
         > div{
@@ -250,7 +257,6 @@ section{
         &.r{ flex-direction: row-reverse; }
         @media only screen and (max-width: $media-phone) {
             flex-direction: column !important;
-            
         }
         
         justify-content: center;
