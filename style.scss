@@ -337,11 +337,15 @@ section{
         a{
             font-size: 2rem;
             line-height: 2rem;
+
+            @media only screen and (max-width: $media-phone) {
+                font-size: 1rem;
+            }
         }
         a{
             color: $accent;
             cursor: pointer;
-            text-decoration: none;
+            text-decoration: underline;
         }
     }
 }
