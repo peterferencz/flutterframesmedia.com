@@ -6,15 +6,22 @@
     "nav_team":"Csapatunk",
     "nav_contact":"Kontakt",
 
-    "landing":"",
+    "landing_title":"FlutterFramesMedia",
+    "landing_text":"Your partner in videography",
 
-    "projects_title":"Eddigi projektjeink",
-    "projects_project_sportday_title":"HTL Eisenstadti Sportnapok",
+    "about_title":"Rólunk",
+    "about_text":"Üdvözöljük a FlutterFramesMediánál. Az FPV drónok használatára szakosodtunk, hogy magával ragadó légi videókat készítsünk, amelyek felemelik a márka történetmesélését. Küldetésünk, hogy olyan kiváló minőségű mozgóképeket biztosítsunk, amelyek innovatív vizuális tartalmakkal erősítik üzleti jelenlétét.",
+
+    "projects_title":"Projektjeink",
+    "projects_project_oldtimer_title":"Oldtimer autós felvonulás",
+    "projects_project_sportday_title":"HTL Eisenstadti sportnapok",
     "projects_project_boxing_title":"Fightnight: boxbajnokság",
     "projects_project_mustang_title":"Ford Mustang Shelby GT 500",
-    "projects_project_ski_title":"HTL Eisenstadti Síhetek",
+    "projects_project_ski_title":"HTL Eisenstadti síhetek",
     "projects_project_sundial_title":"Ausztria legnagyobb napórája",
     
+    "fpv_text":"See Your Business from New Heights",
+
     "team_title":"Csapatunk",
     "team_andras_name":"Farkas Andras",
     "team_andras_role":"Drónpilóta, Videószerkesztő",

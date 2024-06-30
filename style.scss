@@ -30,13 +30,70 @@ hr{
     color: $accent;
     height: 5px;
     background: $accent;
-    outline: none;
+    outline: none !important;
 }
 
 html, body{
     scroll-behavior: smooth;
     scroll-padding-top: calc($navbarHeight + 1rem);
     background-color: $background;
+}
+
+.anim-float-left.intersect.intersecting{
+    animation: floatInLeft .5s ease;
+    animation-fill-mode: forwards;
+}
+.anim-float-right.intersect.intersecting{
+    animation: floatInRight .5s ease;
+    animation-fill-mode: forwards;
+}
+.anim-float-bottom.intersect.intersecting{
+    animation: floatInBottom .5s ease;
+    animation-fill-mode: forwards;
+}
+.anim-float-top.intersect.intersecting{
+    animation: floatInTop .5s ease;
+    animation-fill-mode: forwards;
+}
+@keyframes floatInLeft {
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes floatInRight {
+    from{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes floatInBottom {
+    from{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes floatInBottom {
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 nav{
@@ -94,6 +151,11 @@ nav{
         @media only screen and (max-width: $media-phone) {
             display: none;
         }
+
+        transition: 1s;
+        &:hover{
+            transform: rotate(360deg);
+        }
     }
 
     .language-switcher{
@@ -128,6 +190,10 @@ nav{
 
 
 section{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
     >hr{
         position: absolute;
         top: -1rem;
@@ -135,7 +201,7 @@ section{
         transform: translateX(-50%);
         width: 5rem;
     }
-    >h1{
+    h1{
         text-align: center;
         margin-top: 3rem;
         margin-bottom: 2rem;
@@ -144,49 +210,127 @@ section{
 }
 
 #landing{
-    width: 100%;
     height: 100vh;
-    position: relative;
+    overflow: hidden;
     
     video{
         background: $background;
-        width: 100%;
         height: 100%;
+        width: 177.77777778vh; /* 100 * 16 / 9 */
+        min-width: 100%;
+        min-height: 56.25vw; /* 100 * 9 / 16 */
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
     
     .overlay{
-        background: rgba(0,0,0, .7);
-        padding: 1rem;
+        background: rgba(0,0,0,0);
         position: absolute;
         right: 0;
-        bottom: 10rem;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+        padding: 30px;
+        gap: 20px;
 
-        div{
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-            justify-content: center;
-        }
+        &:hover{
+            background: rgba(0,0,0, .7);
 
-        img{
-            width: 5rem;
-            height: 5rem;
-            margin-right: 1rem;
+            h1, p{
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
         
-        h1, p{
+        h1{
             color: white;
+            font-size: 3rem;
+            transform: translateX(50%);
+            transition: .5s ease;
+            opacity: 0;
+            padding: 0;
+            margin: 0;
+        }
+        p{
+            color: $accent;
+            font-size: 1.5rem;
+            transition: .75s;
+            transform: translateX(-50%);
+            opacity: 0;
+        }
+    }
+
+    .fade{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 5rem;
+        background: linear-gradient(rgba($background, 0), $background);
+    }
+}
+
+#about{
+    margin-top: 100px;
+    >div{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+
+        >div{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            >h1{
+                text-align: left;
+                margin-bottom: 0;
+            }
+            >p{
+                max-width: 50ch;
+            }
+
+            >div:nth-child(1){
+                padding-right: 60px;
+            }
+
+            img{
+                width: 100%;
+                max-width: 300px;
+                object-fit: cover;
+                aspect-ratio: 1/1;
+                border-radius: 2rem;
+                position: relative;
+                // &:nth-child(2){
+                //     transform: translateX(30px);
+                // }
+            }
         }
     }
 }
 
 #projects{
-    width: 100%;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-    > div{
+    hr{
+        margin-top: 3rem;
+    }
+
+    .section{
         display: flex;
         flex-direction: row;
         align-items: stretch;
@@ -204,19 +348,31 @@ section{
         width: 100%;
         cursor: pointer;
 
+        max-width: 4*300px;
+
         > div{
             box-shadow: 0 0 50px 15px $background;
             transition: box-shadow .75s, border .75s;
             border-radius: .5rem;
-            padding-bottom: 2rem;
+            padding-bottom: 1rem;
             flex-grow: 1;
             flex-basis: 0;
             border: 1px solid $text-gray;
-            max-width: 500px;
+            max-width: 300px;
+            min-width: 300px;
+            width: 300px;
+
+
+            @media only screen and (max-width: $media-phone) {
+                border: none;
+                min-width: auto;
+                width: 100%;
+                border-radius: 0;
+            }
  
             &:hover{
                 box-shadow: 0 0 50px 15px $accent;
-                border: 1px solid transparent;
+                // border: 1px solid transparent;
             }
 
             p, h1, a{
@@ -234,6 +390,11 @@ section{
                 object-fit: cover;
                 border-top-left-radius: .5rem;
                 border-top-right-radius: .5rem;
+                filter: grayscale(.25);
+
+                @media only screen and (max-width: $media-phone) {
+                    border-radius: 0;
+                }
             }
             p{
                 margin-bottom: .5rem;
@@ -246,10 +407,29 @@ section{
     }
 }
 
-#team{
-    width: 100%;
-    position: relative;
+#fpv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
 
+    >div{
+        max-width: 70ch;
+    }
+
+    h1{
+        color: $accent;
+        font-size: 10rem;
+        margin-bottom: .5rem;
+    }
+
+    p{
+        text-align: center;
+    }
+}
+
+#team{
     .section{
         width: 100%;
         display: flex;
@@ -331,7 +511,6 @@ section{
 }
 
 #contact{
-    position: relative;
 
     >div{
         height: 300px;

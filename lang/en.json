@@ -6,15 +6,22 @@
     "nav_team":"Team",
     "nav_contact":"Contact",
 
-    "landing":"Capturing Moments, Framing Stories: Elevate Your Vision with Flutterframes media",
+    "landing_title":"FlutterFramesMedia",
+    "landing_text":"Your partner in videography",
+
+    "about_title":"About us",
+    "about_text":"Welcome to FlutterFramesMedia. We specialize in using FPV drones to create captivating aerial videos that elevate your brand's storytelling. Our mission is to provide high-quality cinematography that enhances your business presence with innovative visual content.",
 
     "projects_title":"Projects we have worked on",
+    "projects_project_oldtimer_title":"Elegance in Motion: Custom Cruisers",
     "projects_project_sportday_title":"HTL Eisenstadt's Sports Days ",
     "projects_project_boxing_title":"Fightnight: a boxing tournament",
     "projects_project_mustang_title":"Ford Mustang Shelby GT 500",
     "projects_project_ski_title":"HTL Eisenstadt's Ski Week",
     "projects_project_sundial_title":"Austria's Largest Sundial",
     
+    "fpv_text":"See Your Business from New Heights",
+
     "team_title":"Meet your team",
     "team_andras_name":"Andras Farkas",
     "team_andras_role":"Drone pilot, Video editor",

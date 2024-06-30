@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flutterframes media</title>
+    <title>FlutterFramesMedia</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -27,9 +27,11 @@
     <meta property="og:locale:alternate" content="de">
 
     <meta name="googlebot" content="notranslate">
+
+    <script src="./script.js"></script>
 </head>
 <body>
-    <nav>
+    <nav class="anim-float-top">
         <img src="assets/logo-plain.svg" alt="Logo of Flutterframes">
         <div class="spacer"></div>
         <a href="#">Kezdőlap</a>
@@ -42,42 +44,74 @@
             <a href="./de.html" class="|activateon-de|">DE</a>
             <a href="./hu.html" class="active">HU</a>
         </div>
-
         <!-- TODO instagram + youtube -->
     </nav>
-    <!-- <section id="landing">
-        <video autoplay muted loop src="" type="video/mp4"></video>
+    <section id="landing">
+        <video autoplay muted loop>
+            <source src="assets/mustang.mp4" type="video/mp4">
+        </video>
         <div class="overlay">
-            <img src="assets/logo-plain.svg" alt="Flutterframes logo">
-            <div>
-                <h1></h1>
-            </div>
+            <h1>FlutterFramesMedia</h1>
+            <p>Your partner in videography</p>
+        </div>
+        <div class="fade">
+
         </div>
         <!-- TODO scroll indicator -->
-    <!-- </section> -->
+    </section>
+    <section id="about">
+        <hr>
+        <div>
+            <div>
+                <div>
+                    <img class="intersect anim-float-left" src="assets/about_1.jpg" alt="Camera equipment inside a car">
+                </div>
+                <div>
+                    <img class="intersect anim-float-left" src="assets/about_2.jpg" alt="A desk with fpv goggles on top">
+                </div>
+            </div>
+            <div>
+                <h1>Rólunk</h1>
+                <p>Üdvözöljük a FlutterFramesMediánál. Az FPV drónok használatára szakosodtunk, hogy magával ragadó légi videókat készítsünk, amelyek felemelik a márka történetmesélését. Küldetésünk, hogy olyan kiváló minőségű mozgóképeket biztosítsunk, amelyek innovatív vizuális tartalmakkal erősítik üzleti jelenlétét.</p>
+            </div>
+        </div>
+    </section>
     <section id="projects">
         <hr>
-        <h1>Eddigi projektjeink</h1>
-        <div>
-            <div onpointerdown="window.open('https://www.instagram.com/reel/Cw3KjOBs8bw/', '_blank')">
-                <img src="assets/projects_sportday.JPG" alt="Picture of a man longjumping" loading="lazy">
-                <h1>HTL Eisenstadti Sportnapok</h1>
+        <h1>Projektjeink</h1>
+        <div class="section">
+            <div onclick="window.open('https://www.instagram.com/reel/C8wtf3YiWNH/', '_blank')" class="intersect anim-float-bottom">
+                <img src="assets/projects_oldtimer.jpg" alt="Picture of oldtimer cars" loading="lazy">
+                <h1>Oldtimer autós felvonulás</h1>
             </div>
-            <div onpointerdown="window.open('https://www.instagram.com/reel/C5rSF53uIUe/', '_blank')">
+            <div onclick="window.open('https://www.instagram.com/reel/Cw3KjOBs8bw/', '_blank')" class="intersect anim-float-bottom">
+                <img src="assets/projects_sportday.JPG" alt="Picture of a man longjumping" loading="lazy">
+                <h1>HTL Eisenstadti sportnapok</h1>
+            </div>
+            <div onclick="window.open('https://www.instagram.com/reel/C5rSF53uIUe/', '_blank')" class="intersect anim-float-bottom">
                 <img src="assets/projects_mustang.jpeg" alt="Ford Mustang Shelby GT 500" loading="lazy">
                 <h1>Ford Mustang Shelby GT 500</h1>
             </div>
-            <div onpointerdown="window.open('https://www.instagram.com/reel/C5lcdIbOUvL/', '_blank')">
+            <div onclick="window.open('https://www.instagram.com/reel/C5lcdIbOUvL/', '_blank')" class="intersect anim-float-bottom">
                 <img src="assets/projects_ski.jpeg" alt="man jumping wiht skies" loading="lazy">
-                <h1>HTL Eisenstadti Síhetek</h1>
+                <h1>HTL Eisenstadti síhetek</h1>
             </div>
-            <div onpointerdown="window.open('https://www.instagram.com/reel/C5jbqpTuWOJ/', '_blank')">
+            <div onclick="window.open('https://www.instagram.com/reel/C5jbqpTuWOJ/', '_blank')" class="intersect anim-float-bottom">
                 <img src="assets/projects_sundial.jpeg" alt="sundial" loading="lazy">
                 <h1>Ausztria legnagyobb napórája</h1>
             </div>
-            <div>
+            <div class="intersect anim-float-bottom">
                 <img src="assets/projects_box.png" alt="Picture of two men boxing" loading="lazy">
                 <h1>Fightnight: boxbajnokság</h1>
+            </div>
+        </div>
+    </section>
+    <section id="fpv">
+        <hr>
+        <div>
+            <h1 class="intersect anim-float-bottom">FPV</h1>
+            <div class="intersect anim-float-bottom">
+                <p>See Your Business from New Heights</p>
             </div>
         </div>
     </section>
@@ -85,7 +119,7 @@
         <hr>
         <h1>Csapatunk</h1>
         <div class="section l">
-            <div>   
+            <div class="anim-float-left intersect">   
                 <img src="assets/pfp_andras.jpg" alt="Photo of Andras Farkas" loading="lazy">
                 <div class="border"></div>
             </div>
@@ -96,8 +130,8 @@
             </div>
         </div>
         <div class="section r">
-            <div>
-                <img src="assets/pfp_peter.jpg" alt="Photo of Péter Ferencz" loading="lazy">
+            <div class="anim-float-right intersect">
+                <img src="assets/pfp_peter.png" alt="Photo of Péter Ferencz" loading="lazy">
                 <div class="border"></div>
             </div>
             <div>
@@ -111,7 +145,7 @@
         <hr>
         <h1>Kapcsolat</h1>
         <div>
-            <a href="mailto:hello@flutterframesmedia.com">hello@flutterframesmedia.com</a>
+            <a class="intersect anim-float-bottom" href="mailto:hello@flutterframesmedia.com">hello@flutterframesmedia.com</a>
         </div>
     </section>
     <footer>

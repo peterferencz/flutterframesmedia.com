@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flutterframes media</title>
+    <title>FlutterFramesMedia</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -27,9 +27,11 @@
     <meta property="og:locale:alternate" content="de">
 
     <meta name="googlebot" content="notranslate">
+
+    <script src="./script.js"></script>
 </head>
 <body>
-    <nav>
+    <nav class="anim-float-top">
         <img src="assets/logo-plain.svg" alt="Logo of Flutterframes">
         <div class="spacer"></div>
         <a href="#">Home</a>
@@ -42,42 +44,74 @@
             <a href="./de.html" class="|activateon-de|">DE</a>
             <a href="./hu.html" class="|activateon-hu|">HU</a>
         </div>
-
         <!-- TODO instagram + youtube -->
     </nav>
-    <!-- <section id="landing">
-        <video autoplay muted loop src="" type="video/mp4"></video>
+    <section id="landing">
+        <video autoplay muted loop>
+            <source src="assets/mustang.mp4" type="video/mp4">
+        </video>
         <div class="overlay">
-            <img src="assets/logo-plain.svg" alt="Flutterframes logo">
-            <div>
-                <h1>Capturing Moments, Framing Stories: Elevate Your Vision with Flutterframes media</h1>
-            </div>
+            <h1>FlutterFramesMedia</h1>
+            <p>Your partner in videography</p>
+        </div>
+        <div class="fade">
+
         </div>
         <!-- TODO scroll indicator -->
-    <!-- </section> -->
+    </section>
+    <section id="about">
+        <hr>
+        <div>
+            <div>
+                <div>
+                    <img class="intersect anim-float-left" src="assets/about_1.jpg" alt="Camera equipment inside a car">
+                </div>
+                <div>
+                    <img class="intersect anim-float-left" src="assets/about_2.jpg" alt="A desk with fpv goggles on top">
+                </div>
+            </div>
+            <div>
+                <h1>About us</h1>
+                <p>Welcome to FlutterFramesMedia. We specialize in using FPV drones to create captivating aerial videos that elevate your brand's storytelling. Our mission is to provide high-quality cinematography that enhances your business presence with innovative visual content.</p>
+            </div>
+        </div>
+    </section>
     <section id="projects">
         <hr>
         <h1>Projects we have worked on</h1>
-        <div>
-            <div onpointerdown="window.open('https://www.instagram.com/reel/Cw3KjOBs8bw/', '_blank')">
+        <div class="section">
+            <div onclick="window.open('https://www.instagram.com/reel/C8wtf3YiWNH/', '_blank')" class="intersect anim-float-bottom">
+                <img src="assets/projects_oldtimer.jpg" alt="Picture of oldtimer cars" loading="lazy">
+                <h1>Elegance in Motion: Custom Cruisers</h1>
+            </div>
+            <div onclick="window.open('https://www.instagram.com/reel/Cw3KjOBs8bw/', '_blank')" class="intersect anim-float-bottom">
                 <img src="assets/projects_sportday.JPG" alt="Picture of a man longjumping" loading="lazy">
                 <h1>HTL Eisenstadt's Sports Days </h1>
             </div>
-            <div onpointerdown="window.open('https://www.instagram.com/reel/C5rSF53uIUe/', '_blank')">
+            <div onclick="window.open('https://www.instagram.com/reel/C5rSF53uIUe/', '_blank')" class="intersect anim-float-bottom">
                 <img src="assets/projects_mustang.jpeg" alt="Ford Mustang Shelby GT 500" loading="lazy">
                 <h1>Ford Mustang Shelby GT 500</h1>
             </div>
-            <div onpointerdown="window.open('https://www.instagram.com/reel/C5lcdIbOUvL/', '_blank')">
+            <div onclick="window.open('https://www.instagram.com/reel/C5lcdIbOUvL/', '_blank')" class="intersect anim-float-bottom">
                 <img src="assets/projects_ski.jpeg" alt="man jumping wiht skies" loading="lazy">
                 <h1>HTL Eisenstadt's Ski Week</h1>
             </div>
-            <div onpointerdown="window.open('https://www.instagram.com/reel/C5jbqpTuWOJ/', '_blank')">
+            <div onclick="window.open('https://www.instagram.com/reel/C5jbqpTuWOJ/', '_blank')" class="intersect anim-float-bottom">
                 <img src="assets/projects_sundial.jpeg" alt="sundial" loading="lazy">
                 <h1>Austria's Largest Sundial</h1>
             </div>
-            <div>
+            <div class="intersect anim-float-bottom">
                 <img src="assets/projects_box.png" alt="Picture of two men boxing" loading="lazy">
                 <h1>Fightnight: a boxing tournament</h1>
+            </div>
+        </div>
+    </section>
+    <section id="fpv">
+        <hr>
+        <div>
+            <h1 class="intersect anim-float-bottom">FPV</h1>
+            <div class="intersect anim-float-bottom">
+                <p>See Your Business from New Heights</p>
             </div>
         </div>
     </section>
@@ -85,7 +119,7 @@
         <hr>
         <h1>Meet your team</h1>
         <div class="section l">
-            <div>   
+            <div class="anim-float-left intersect">   
                 <img src="assets/pfp_andras.jpg" alt="Photo of Andras Farkas" loading="lazy">
                 <div class="border"></div>
             </div>
@@ -96,8 +130,8 @@
             </div>
         </div>
         <div class="section r">
-            <div>
-                <img src="assets/pfp_peter.jpg" alt="Photo of Péter Ferencz" loading="lazy">
+            <div class="anim-float-right intersect">
+                <img src="assets/pfp_peter.png" alt="Photo of Péter Ferencz" loading="lazy">
                 <div class="border"></div>
             </div>
             <div>
@@ -111,7 +145,7 @@
         <hr>
         <h1>Get in touch</h1>
         <div>
-            <a href="mailto:hello@flutterframesmedia.com">hello@flutterframesmedia.com</a>
+            <a class="intersect anim-float-bottom" href="mailto:hello@flutterframesmedia.com">hello@flutterframesmedia.com</a>
         </div>
     </section>
     <footer>
